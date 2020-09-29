@@ -1,0 +1,96 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rebeccapurple;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 15vh 75vh 10vh;
+  /* the template-ares can be named whatever you want. */
+  grid-template-areas:
+    "header header"
+    "main aside"
+    "footer footer"
+  ;
+}
+
+.container header {
+  background-color: yellow;
+  grid-area: header;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.container header nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  max-width: 980px;
+}
+
+.container header nav a {
+  text-decoration: none;
+}
+
+.container main {
+  grid-area: main;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.container main div {
+  padding: 5rem;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.container main div p {
+  max-width: 70%;
+}
+
+.container aside {
+  grid-area: aside;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container aside ul li:first-child {
+  margin-top: 1rem;
+}
+
+.container aside ul li+li {
+  margin-top: 2rem;
+}
+
+.container footer {
+  grid-area: footer;
+  background-color: #47ff47;
+}
+
+.container footer p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container footer p span:first-child {
+  color: cornflowerblue;
+}
